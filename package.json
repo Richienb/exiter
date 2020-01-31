@@ -1,8 +1,8 @@
 {
-	"name": "the-module",
+	"name": "exiter",
 	"version": "0.0.0",
-	"description": "My awesome module.",
-	"repository": "https://github.com/Richienb/the-module.git",
+	"description": "Access power options for a computer.",
+	"repository": "https://github.com/Richienb/exiter.git",
 	"author": "Richie Bendall <richiebendall@gmail.com>",
 	"license": "MIT",
 	"main": "index.js",
@@ -17,7 +17,15 @@
 		"lint": "xo",
 		"test": "yarn lint && ava"
 	},
-	"keywords": [],
+	"keywords": [
+		"exit",
+		"shutdown",
+		"restart",
+		"computer",
+		"client",
+		"control",
+		"power"
+	],
 	"dependencies": {
 		"execa": "^4.0.0"
 	},

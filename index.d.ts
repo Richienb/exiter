@@ -1,14 +1,51 @@
-/**
- * My awesome module.
- * @param input Lorem ipsum.
- * @param postfix Lorem ipsum.
- * @example
- * ```
- * const theModule = require("the-module");
- * theModule("unicorns");
- * //=> 'unicorns & rainbows'
- * ```
-*/
-declare function theModule(input: string, { postfix }: { postfix?: string }): string;
+const exiter: {
+	/**
+	 * Shutdown the computer.
+	 * @example
+	 * ```
+	 * const exiter = require("exiter");
+	 *
+	 * (async () => {
+	 * 	exiter();
+	 * })();
+	 * ```
+	*/
+	(): Promise<void>
 
-export = theModule;
+	/**
+	 * Shutdown the computer.
+	 * @example
+	 * ```
+	 * const exiter = require("exiter");
+	 *
+	 * exiter.sync();
+	 * ```
+	*/
+	sync(): void
+
+	/**
+	 * Restart the computer.
+	 * @example
+	 * ```
+	 * const exiter = require("exiter");
+	 *
+	 * (async () => {
+	 * 	exiter.restart();
+	 * })();
+	 * ```
+	*/
+	restart(): Promise<void>
+
+	/**
+	 * Restart the computer.
+	 * @example
+	 * ```
+	 * const exiter = require("exiter");
+	 *
+	 * exiter.restartSync();
+	 * ```
+	*/
+	restartSync(): void
+}
+
+export = exiter

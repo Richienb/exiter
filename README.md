@@ -1,41 +1,33 @@
-# The module [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/the-module/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/the-module)
+# Exiter [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/exiter/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/exiter)
 
-My awesome module.
+Access power options for a computer.
 
-[![NPM Badge](https://nodei.co/npm/the-module.png)](https://npmjs.com/package/the-module)
+[![NPM Badge](https://nodei.co/npm/exiter.png)](https://npmjs.com/package/exiter)
 
 ## Install
 
 ```sh
-npm install the-module
+npm install exiter
 ```
 
 ## Usage
 
 ```js
-const theModule = require("the-module");
+const exiter = require("exiter");
 
-theModule("unicorns");
-//=> 'unicorns & rainbows'
+exiter.sync() // Shutdown synchronously
+
+exiter.restartSync() // Restart synchronously
 ```
 
 ## API
 
-### theModule(input, options?)
+### exiter()
+### exiter.sync()
 
-#### input
+### exiter.restart()
+### exiter.restartSync()
 
-Type: `string`
+## Related
 
-Lorem ipsum.
-
-#### options
-
-Type: `object`
-
-##### postfix
-
-Type: `string`\
-Default: `rainbows`
-
-Lorem ipsum.
+- [cross-exit](https://github.com/Richienb/cross-exit) - Terminate the execution of a script.

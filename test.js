@@ -1,13 +1,9 @@
 const test = require("ava")
-const theModule = require(".")
+const exiter = require(".")
 
 test("main", (t) => {
-	t.throws(() => {
-		theModule(123)
-	}, {
-		instanceOf: TypeError,
-		message: "Expected a string, got number",
-	})
-
-	t.is(theModule("unicorns"), "unicorns & rainbows")
+	t.truthy(exiter)
+	t.truthy(exiter.sync)
+	t.truthy(exiter.restart)
+	t.truthy(exiter.restartSync)
 })
